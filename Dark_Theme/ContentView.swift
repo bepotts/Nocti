@@ -11,6 +11,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             DarkModeToggle()
+            TimePicker()
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
