@@ -6,14 +6,21 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2947AA4A2E2C1D08003A9D29 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2947AA492E2C1D08003A9D29 /* README.md */; };
+		2947AA4C2E2C1D6E003A9D29 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2947AA4B2E2C1D6E003A9D29 /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		2947AA352E2AF2F3003A9D29 /* Dark Theme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Theme.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2947AA492E2C1D08003A9D29 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2947AA4B2E2C1D6E003A9D29 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		2947AA372E2AF2F3003A9D29 /* Dark Theme */ = {
+		2947AA372E2AF2F3003A9D29 /* Dark_Theme */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Dark Theme";
+			path = Dark_Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +39,9 @@
 		2947AA2C2E2AF2F3003A9D29 = {
 			isa = PBXGroup;
 			children = (
-				2947AA372E2AF2F3003A9D29 /* Dark Theme */,
+				2947AA492E2C1D08003A9D29 /* README.md */,
+				2947AA4B2E2C1D6E003A9D29 /* .gitignore */,
+				2947AA372E2AF2F3003A9D29 /* Dark_Theme */,
 				2947AA362E2AF2F3003A9D29 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +70,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				2947AA372E2AF2F3003A9D29 /* Dark Theme */,
+				2947AA372E2AF2F3003A9D29 /* Dark_Theme */,
 			);
 			name = "Dark Theme";
 			packageProductDependencies = (
@@ -109,6 +118,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2947AA4A2E2C1D08003A9D29 /* README.md in Resources */,
+				2947AA4C2E2C1D6E003A9D29 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
