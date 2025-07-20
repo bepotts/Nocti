@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		2947AA4A2E2C1D08003A9D29 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2947AA492E2C1D08003A9D29 /* README.md */; };
 		2947AA4C2E2C1D6E003A9D29 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2947AA4B2E2C1D6E003A9D29 /* .gitignore */; };
+		2947AA552E2D2618003A9D29 /* ideas.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2947AA542E2D260F003A9D29 /* ideas.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2947AA352E2AF2F3003A9D29 /* Dark Theme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Theme.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2947AA492E2C1D08003A9D29 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2947AA4B2E2C1D6E003A9D29 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2947AA542E2D260F003A9D29 /* ideas.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ideas.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -39,6 +41,7 @@
 		2947AA2C2E2AF2F3003A9D29 = {
 			isa = PBXGroup;
 			children = (
+				2947AA542E2D260F003A9D29 /* ideas.txt */,
 				2947AA492E2C1D08003A9D29 /* README.md */,
 				2947AA4B2E2C1D6E003A9D29 /* .gitignore */,
 				2947AA372E2AF2F3003A9D29 /* Dark_Theme */,
@@ -120,6 +123,7 @@
 			files = (
 				2947AA4A2E2C1D08003A9D29 /* README.md in Resources */,
 				2947AA4C2E2C1D6E003A9D29 /* .gitignore in Resources */,
+				2947AA552E2D2618003A9D29 /* ideas.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,9 +9,26 @@ import SwiftUI
 
 struct TimePicker: View {
     
-    @State private var date: Date = Date()
+    @State private var darkTime: Date = defaultDarkTime()
+    @State private var lightTime: Date = defaultLightTime()
     var body: some View {
-        Text("TimePicker")
-        DatePicker("Please Enter a Date", selection: $date, displayedComponents: .hourAndMinute)
+        VStack {
+            DatePicker("Light Mode", selection: $lightTime, displayedComponents: .hourAndMinute)
+            DatePicker("Dark Mode", selection: $darkTime, displayedComponents: .hourAndMinute)
+        }
+    }
+    
+    static func defaultLightTime() -> Date {
+        var components = DateComponents()
+        components.hour = 8
+        components.minute = 0
+        return Calendar.current.date(from: components)!
+    }
+    
+    static func defaultDarkTime() -> Date {
+        var components = DateComponents()
+        components.hour = 20
+        components.minute = 0
+        return Calendar.current.date(from: components)!
     }
 }

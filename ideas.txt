@@ -1,0 +1,5 @@
+Some feature ideas
+
+* Save Time
+* Change Desktop background
+* Create a Dark Mode for the app

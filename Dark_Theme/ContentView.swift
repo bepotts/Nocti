@@ -12,10 +12,6 @@ struct ContentView: View {
         VStack {
             DarkModeToggle()
             TimePicker()
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
         }
         .padding()
     }
