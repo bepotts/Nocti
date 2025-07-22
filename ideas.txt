@@ -3,3 +3,6 @@ Some feature ideas
 * Save Time
 * Change Desktop background
 * Create a Dark Mode for the app
+* Make only one record possible
+* Pull that record from storage on boot
+* Make sure it persists when the app exits
