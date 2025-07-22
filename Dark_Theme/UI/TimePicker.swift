@@ -16,12 +16,5 @@ struct TimePicker: View {
             DatePicker("Light Mode", selection: $schedule.lightSchedule, displayedComponents: .hourAndMinute)
             DatePicker("Dark Mode", selection: $schedule.darkSchedule, displayedComponents: .hourAndMinute)
         }
-        HStack {
-            Button (action: {
-                print("Save Button Pressed")
-            }) {
-                Text("Save")
-            }
-        }
     }
 }
