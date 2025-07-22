@@ -6,29 +6,22 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct TimePicker: View {
     
-    @State private var darkTime: Date = defaultDarkTime()
-    @State private var lightTime: Date = defaultLightTime()
+    @State var schedule: ThemeSchedule
     var body: some View {
         VStack {
-            DatePicker("Light Mode", selection: $lightTime, displayedComponents: .hourAndMinute)
-            DatePicker("Dark Mode", selection: $darkTime, displayedComponents: .hourAndMinute)
+            DatePicker("Light Mode", selection: $schedule.lightSchedule, displayedComponents: .hourAndMinute)
+            DatePicker("Dark Mode", selection: $schedule.darkSchedule, displayedComponents: .hourAndMinute)
         }
-    }
-    
-    static func defaultLightTime() -> Date {
-        var components = DateComponents()
-        components.hour = 8
-        components.minute = 0
-        return Calendar.current.date(from: components)!
-    }
-    
-    static func defaultDarkTime() -> Date {
-        var components = DateComponents()
-        components.hour = 20
-        components.minute = 0
-        return Calendar.current.date(from: components)!
+        HStack {
+            Button (action: {
+                print("Save Button Pressed")
+            }) {
+                Text("Save")
+            }
+        }
     }
 }
