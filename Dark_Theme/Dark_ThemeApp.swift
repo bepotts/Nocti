@@ -9,9 +9,23 @@ import SwiftUI
 
 @main
 struct Dark_ThemeApp: App {
+    @AppStorage("appearance") private var appearance: Appearance = .system
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(changeAppearance())
+        }
+    }
+    
+    private func changeAppearance() -> ColorScheme? {
+        print("Inside changeAppearance function")
+        switch appearance {
+            case .light:
+                return .light
+            case .dark:
+                return .dark
+            case .system:
+                return nil
         }
     }
 }

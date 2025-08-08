@@ -10,10 +10,17 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
+    @State private var darkModeIsOn: Bool = false
+    @AppStorage("appearance") private var appearance: Appearance?
+    
     let schedule: ThemeSchedule = ThemeSchedule()
     var body: some View {
         VStack {
-            DarkModeToggle()
+            Toggle("Enable Dark Mode", isOn: $darkModeIsOn)
+                .toggleStyle(SwitchToggleStyle())
+                .onChange(of: darkModeIsOn) { newValue, oldValue in
+                    performDarkModeToggle(darkMode: darkModeIsOn)
+                }
             TimePicker(schedule: schedule)
         }
         .padding()
@@ -39,6 +46,14 @@ struct ContentView: View {
             print("Model Saved")
         } catch {
             print("Error saving the model: \(error)")
+        }
+    }
+    
+    func performDarkModeToggle(darkMode: Bool) {
+        if darkMode {
+            appearance = .dark
+        } else {
+            appearance = .light
         }
     }
 }
