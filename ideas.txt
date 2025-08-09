@@ -6,3 +6,5 @@ Some feature ideas
 * Pull that record from storage on boot
 * Make sure it persists when the app exits
 * Add three circles and sync with the computer's theme
+* Make it work on MacOS instead of iOS
+* Add logos for the app
