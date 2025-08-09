@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Dark_ThemeApp: App {
+struct DarkThemeApp: App {
     @AppStorage("appearance") private var appearance: Appearance = .system
     var body: some Scene {
         WindowGroup {

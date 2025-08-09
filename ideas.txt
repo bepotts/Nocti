@@ -1,10 +1,8 @@
 Some feature ideas
 
-* Change Desktop background
-* Create a Dark Mode for the app
+* Change Desktop background ( this will involve pointing to files)
 * Make only one record possible
 * Pull that record from storage on boot
 * Make sure it persists when the app exits
 * Add three circles and sync with the computer's theme
-* Make it work on MacOS instead of iOS
 * Add logos for the app
