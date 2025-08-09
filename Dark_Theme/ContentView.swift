@@ -12,25 +12,44 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @State private var darkModeIsOn: Bool = false
     @AppStorage("appearance") private var appearance: Appearance?
-    
     let schedule: ThemeSchedule = ThemeSchedule()
+    
     var body: some View {
         VStack {
-            Toggle("Enable Dark Mode", isOn: $darkModeIsOn)
-                .toggleStyle(SwitchToggleStyle())
-                .onChange(of: darkModeIsOn) { newValue, oldValue in
-                    performDarkModeToggle(darkMode: darkModeIsOn)
-                }
+            darkToggle
             TimePicker(schedule: schedule)
         }
         .padding()
         HStack {
-            Button (action: {
-                print("Save Button Pressed")
-                saveSchedule()
-            }) {
-                Text("Save")
+            saveButton
+        }
+        VStack {
+            HStack {
+                CircleButton(action: circleButtonTapped)
+                CircleButton(color: .black, action: circleButtonTapped)
+                CircleButton(action: circleButtonTapped)
             }
+        }
+    }
+    
+    func circleButtonTapped() {
+        print("Circle Button Tapped")
+    }
+    
+    var darkToggle: some View {
+        Toggle("Enable Dark Mode", isOn: $darkModeIsOn)
+            .toggleStyle(SwitchToggleStyle())
+            .onChange(of: darkModeIsOn) { newValue, oldValue in
+                performDarkModeToggle(darkMode: darkModeIsOn)
+            }
+    }
+    
+    var saveButton: some View {
+        Button (action: {
+            print("Save Button Pressed")
+            saveSchedule()
+        }) {
+            Text("Save")
         }
     }
     
@@ -50,6 +69,7 @@ struct ContentView: View {
     }
     
     func performDarkModeToggle(darkMode: Bool) {
+        print("Inside the Dark Mode Toggle function")
         if darkMode {
             appearance = .dark
         } else {

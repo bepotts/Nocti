@@ -18,7 +18,7 @@ struct Dark_ThemeApp: App {
     }
     
     private func changeAppearance() -> ColorScheme? {
-        print("Inside changeAppearance function")
+        print("Inside change Appearance function")
         switch appearance {
             case .light:
                 return .light
