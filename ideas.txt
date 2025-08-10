@@ -6,3 +6,4 @@ Some feature ideas
 * Make sure it persists when the app exits
 * Add three circles and sync with the computer's theme
 * Add logos for the app
+* Make the stored theme be the default toggle on boot up
