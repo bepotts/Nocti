@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    @Binding var colorScheme: ColorScheme?
     @Environment(\.modelContext) private var modelContext
     @State private var darkModeIsOn: Bool = false
     @AppStorage("appearance") private var appearance: Appearance?
@@ -71,13 +72,15 @@ struct ContentView: View {
     func performDarkModeToggle(darkMode: Bool) {
         print("Inside the Dark Mode Toggle function")
         if darkMode {
+            colorScheme = .dark
             appearance = .dark
         } else {
+            colorScheme = .light
             appearance = .light
         }
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(colorScheme: .constant(nil) as Binding<ColorScheme?>)
 }
