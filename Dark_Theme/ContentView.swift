@@ -24,16 +24,28 @@ struct ContentView: View {
         HStack {
             saveButton
         }
+        .padding()
         VStack {
             HStack {
-                CircleButton(action: circleButtonTapped)
-                CircleButton(color: .black, action: circleButtonTapped)
-                CircleButton(action: circleButtonTapped)
+                CircleButton(action: { circleButtonTapped(.light) })
+                CircleButton(color: .black, action: { circleButtonTapped(.dark) })
+                CircleButton(action: { circleButtonTapped(nil) })
             }
         }
     }
     
-    func circleButtonTapped() {
+    func circleButtonTapped(_ newColorScheme: ColorScheme?) {
+        colorScheme = newColorScheme
+        
+        if let newColorScheme = newColorScheme {
+            if newColorScheme == .light {
+                appearance = .dark
+            } else {
+                appearance = .light
+            }
+        } else {
+            appearance = .system
+        }
         print("Circle Button Tapped")
     }
     
