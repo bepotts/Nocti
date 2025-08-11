@@ -9,10 +9,11 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Binding var colorScheme: ColorScheme?
+    @AppStorage("appearance") private var storedScheme: Appearance?
+    @Binding var currentColorScheme: ColorScheme?
+    @Environment(\.colorScheme) var environmentColorScheme
     @Environment(\.modelContext) private var modelContext
     @State private var darkModeIsOn: Bool = false
-    @AppStorage("appearance") private var appearance: Appearance?
     let schedule: ThemeSchedule = ThemeSchedule()
     
     var body: some View {
@@ -35,18 +36,18 @@ struct ContentView: View {
     }
     
     func circleButtonTapped(_ newColorScheme: ColorScheme?) {
-        colorScheme = newColorScheme
+        currentColorScheme = newColorScheme
         
         if let newColorScheme = newColorScheme {
             if newColorScheme == .light {
-                appearance = .dark
+                storedScheme = .light
             } else {
-                appearance = .light
+                storedScheme = .dark
             }
         } else {
-            appearance = .system
+            currentColorScheme = systemColorScheme()
+            storedScheme = .system
         }
-        print("Circle Button Tapped")
     }
     
     var darkToggle: some View {
@@ -84,15 +85,20 @@ struct ContentView: View {
     func performDarkModeToggle(darkMode: Bool) {
         print("Inside the Dark Mode Toggle function")
         if darkMode {
-            colorScheme = .dark
-            appearance = .dark
+            currentColorScheme = .dark
+            storedScheme = .dark
         } else {
-            colorScheme = .light
-            appearance = .light
+            currentColorScheme = .light
+            storedScheme = .light
         }
+    }
+    
+    func systemColorScheme() -> ColorScheme {
+        let match = NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua])
+        return match == .darkAqua ? .dark : .light
     }
 }
 
 #Preview {
-    ContentView(colorScheme: .constant(nil) as Binding<ColorScheme?>)
+    ContentView(currentColorScheme: .constant(nil) as Binding<ColorScheme?>)
 }

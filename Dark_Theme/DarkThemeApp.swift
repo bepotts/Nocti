@@ -26,7 +26,7 @@ struct DarkThemeApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            ContentView(colorScheme: $currentTheme)
+            ContentView(currentColorScheme: $currentTheme)
                 .preferredColorScheme(currentTheme)
         }
     }
