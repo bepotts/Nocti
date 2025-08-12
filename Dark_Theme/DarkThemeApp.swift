@@ -9,16 +9,12 @@ import SwiftUI
 
 @main
 struct DarkThemeApp: App {
-    @AppStorage("appearance") private var appearance: Appearance = .system
-    @State private var currentTheme: ColorScheme? = nil
-    @Environment(\.colorScheme) var systemColorScheme: ColorScheme
+    @AppStorage("appearance") private var appearance: AppearancePref = .system
     
     init() {
         // This resets the @AppStorage each run when the "-reset-defaults" argument is sent during launch
         if ProcessInfo.processInfo.arguments.contains("-reset-defaults") {
-            print("Inside Process info if statment")
             if let bundle = Bundle.main.bundleIdentifier {
-                print("Resetting UserDefaults")
                 UserDefaults.standard.removePersistentDomain(forName: bundle)
                 UserDefaults.standard.synchronize()
             }
@@ -26,25 +22,33 @@ struct DarkThemeApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            ContentView(currentColorScheme: $currentTheme)
-                .preferredColorScheme(currentTheme)
+            ContentView(storedScheme: $appearance)
+                .modifier(AppAppearance(pref: appearance))
         }
     }
     
-    private func changeAppearance() -> ColorScheme? {
-        
-        if appearance == .system {
-            return nil
-        }
-        
-        print("Inside change Appearance function")
-        switch appearance {
-        case .light:
-            return .light
-        case .dark:
-            return .dark
+    func clearAppKitOverrides() {
+        print("Clearning AppKit Overrides")
+        NSApp.appearance = nil
+        NSApplication.shared.windows.forEach { $0.appearance = nil }
+    }
+}
+
+struct AppAppearance: ViewModifier {
+    let pref: AppearancePref
+    func body(content: Content) -> some View {
+        switch pref {
         case .system:
-            return systemColorScheme
+            content
+        case .light:
+            content.preferredColorScheme(.light)
+        case .dark:
+            content.preferredColorScheme(.dark)
         }
+    }
+    
+    func clearAppKitOverrides() {
+        NSApp.appearance = nil
+        NSApplication.shared.windows.forEach { $0.appearance = nil }
     }
 }
