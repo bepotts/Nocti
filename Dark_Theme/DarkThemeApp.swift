@@ -22,7 +22,7 @@ struct DarkThemeApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            ContentView(storedScheme: $appearance)
+            NavigationView(storedScheme: $appearance)
                 .modifier(AppAppearance(pref: appearance))
         }
     }

@@ -1,14 +1,14 @@
 //
-//  ContentView.swift
+//  ThemeSwitchPage.swift
 //  Dark Theme
 //
-//  Created by Brandon Potts on 7/18/25.
+//  Created by Brandon Potts on 8/12/25.
 //
 
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct ThemeSwitchPage: View {
     @Binding var storedScheme: AppearancePref
     @Environment(\.modelContext) private var modelContext
     let schedule: ThemeSchedule = ThemeSchedule()
@@ -61,5 +61,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(storedScheme: .constant(.light) as Binding<AppearancePref>)
+    NavigationView(storedScheme: .constant(.light) as Binding<AppearancePref>)
 }
