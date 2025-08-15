@@ -18,3 +18,7 @@ struct TimePicker: View {
         }
     }
 }
+
+#Preview {
+    TimePicker(schedule: ThemeSchedule())
+}

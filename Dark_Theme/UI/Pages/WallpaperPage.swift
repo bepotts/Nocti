@@ -14,3 +14,8 @@ struct WallpaperPage: View {
         Text("This is the Wallpaper Page!")
     }
 }
+
+
+#Preview {
+    WallpaperPage()
+}

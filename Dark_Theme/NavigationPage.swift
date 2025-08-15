@@ -25,7 +25,6 @@ struct NavigationPage: View {
     }
 }
 
-//#Preview {
-//    NavigationPage(themeManager: .constant(.light) as Binding<AppearancePref>)
-//    NavigationPage(themeManager: <#T##ThemeManager#>.constant(.dark) as Binding<AppearancePref>)
-//}
+#Preview {
+    NavigationPage()
+}

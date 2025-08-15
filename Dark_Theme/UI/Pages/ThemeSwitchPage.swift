@@ -62,6 +62,6 @@ struct ThemeSwitchPage: View {
     }
 }
 
-//#Preview {
-//    NavigationPage(storedScheme: .constant(.light) as Binding<AppearancePref>)
-//}
+#Preview {
+    ThemeSwitchPage()
+}
