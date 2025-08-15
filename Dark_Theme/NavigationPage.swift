@@ -8,13 +8,14 @@
 import SwiftUI
 import SwiftData
 
-struct NavigationView: View {
-    @Binding var storedScheme: AppearancePref
+struct NavigationPage: View {
+//    @Binding var storedScheme: AppearancePref
+//    @EnvironmentObject var themeManager: ThemeManager
     
     var body: some View {
         NavigationSplitView {
             List {
-                NavigationLink("Schedule Switch", destination: ThemeSwitchPage(storedScheme: $storedScheme))
+                NavigationLink("Schedule Switch", destination: ThemeSwitchPage())
                 NavigationLink("Wallpaper Settings", destination: WallpaperPage())
             }
             .navigationTitle(Text("Menu"))
@@ -24,6 +25,7 @@ struct NavigationView: View {
     }
 }
 
-#Preview {
-    NavigationView(storedScheme: .constant(.light) as Binding<AppearancePref>)
-}
+//#Preview {
+//    NavigationPage(themeManager: .constant(.light) as Binding<AppearancePref>)
+//    NavigationPage(themeManager: <#T##ThemeManager#>.constant(.dark) as Binding<AppearancePref>)
+//}

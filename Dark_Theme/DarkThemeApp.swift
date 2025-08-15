@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct DarkThemeApp: App {
     @AppStorage("appearance") private var appearance: AppearancePref = .system
+    @StateObject private var themeManager = ThemeManager()
     
     init() {
         // This resets the @AppStorage each run when the "-reset-defaults" argument is sent during launch
@@ -22,8 +23,9 @@ struct DarkThemeApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            NavigationView(storedScheme: $appearance)
-                .modifier(AppAppearance(pref: appearance))
+            NavigationPage()
+                .environmentObject(themeManager)
+                .preferredColorScheme(themeManager.colorScheme)
         }
     }
     
@@ -32,6 +34,10 @@ struct DarkThemeApp: App {
         NSApp.appearance = nil
         NSApplication.shared.windows.forEach { $0.appearance = nil }
     }
+}
+
+class ThemeManager: ObservableObject {
+    @Published var colorScheme: ColorScheme? = nil
 }
 
 struct AppAppearance: ViewModifier {

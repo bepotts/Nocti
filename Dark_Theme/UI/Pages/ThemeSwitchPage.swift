@@ -9,7 +9,8 @@ import SwiftUI
 import SwiftData
 
 struct ThemeSwitchPage: View {
-    @Binding var storedScheme: AppearancePref
+//    @Binding var storedScheme: AppearancePref
+    @EnvironmentObject var themeManager: ThemeManager
     @Environment(\.modelContext) private var modelContext
     let schedule: ThemeSchedule = ThemeSchedule()
     
@@ -26,13 +27,14 @@ struct ThemeSwitchPage: View {
             HStack {
                 CircleButton(action: { circleButtonTapped(.light) })
                 CircleButton(color: .black, action: { circleButtonTapped(.dark) })
-                CircleButton(action: { circleButtonTapped(.system) })
+                CircleButton(action: { circleButtonTapped(nil) })
             }
         }
     }
     
-    func circleButtonTapped(_ newColorScheme: AppearancePref) {
-        storedScheme = newColorScheme
+    func circleButtonTapped(_ newColorScheme: ColorScheme?) {
+//        storedScheme = newColorScheme
+        themeManager.colorScheme = newColorScheme
     }
     
     var saveButton: some View {
@@ -60,6 +62,6 @@ struct ThemeSwitchPage: View {
     }
 }
 
-#Preview {
-    NavigationView(storedScheme: .constant(.light) as Binding<AppearancePref>)
-}
+//#Preview {
+//    NavigationPage(storedScheme: .constant(.light) as Binding<AppearancePref>)
+//}

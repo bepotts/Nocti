@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WallpaperPage: View {
+    @EnvironmentObject var themeManager: ThemeManager
     
     var body: some View {
         Text("This is the Wallpaper Page!")
