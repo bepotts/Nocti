@@ -1,4 +1,4 @@
-Unamed Theme Switcher App
+Nocti
 ======
 
 
