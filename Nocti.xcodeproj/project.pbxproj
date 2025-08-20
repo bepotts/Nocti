@@ -13,16 +13,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2947AA352E2AF2F3003A9D29 /* Dark Theme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Theme.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2947AA352E2AF2F3003A9D29 /* Nocti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nocti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2947AA492E2C1D08003A9D29 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2947AA4B2E2C1D6E003A9D29 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2947AA542E2D260F003A9D29 /* ideas.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ideas.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		2947AA372E2AF2F3003A9D29 /* Dark_Theme */ = {
+		2947AA372E2AF2F3003A9D29 /* Nocti */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Dark_Theme;
+			path = Nocti;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -44,7 +44,7 @@
 				2947AA542E2D260F003A9D29 /* ideas.txt */,
 				2947AA492E2C1D08003A9D29 /* README.md */,
 				2947AA4B2E2C1D6E003A9D29 /* .gitignore */,
-				2947AA372E2AF2F3003A9D29 /* Dark_Theme */,
+				2947AA372E2AF2F3003A9D29 /* Nocti */,
 				2947AA362E2AF2F3003A9D29 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,7 +52,7 @@
 		2947AA362E2AF2F3003A9D29 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2947AA352E2AF2F3003A9D29 /* Dark Theme.app */,
+				2947AA352E2AF2F3003A9D29 /* Nocti.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,9 +60,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2947AA342E2AF2F3003A9D29 /* Dark Theme */ = {
+		2947AA342E2AF2F3003A9D29 /* Nocti */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2947AA402E2AF2F4003A9D29 /* Build configuration list for PBXNativeTarget "Dark Theme" */;
+			buildConfigurationList = 2947AA402E2AF2F4003A9D29 /* Build configuration list for PBXNativeTarget "Nocti" */;
 			buildPhases = (
 				2947AA312E2AF2F3003A9D29 /* Sources */,
 				2947AA322E2AF2F3003A9D29 /* Frameworks */,
@@ -73,13 +73,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				2947AA372E2AF2F3003A9D29 /* Dark_Theme */,
+				2947AA372E2AF2F3003A9D29 /* Nocti */,
 			);
-			name = "Dark Theme";
+			name = Nocti;
 			packageProductDependencies = (
 			);
 			productName = "Dark Theme";
-			productReference = 2947AA352E2AF2F3003A9D29 /* Dark Theme.app */;
+			productReference = 2947AA352E2AF2F3003A9D29 /* Nocti.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -97,7 +97,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2947AA302E2AF2F3003A9D29 /* Build configuration list for PBXProject "Dark Theme" */;
+			buildConfigurationList = 2947AA302E2AF2F3003A9D29 /* Build configuration list for PBXProject "Nocti" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -111,7 +111,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2947AA342E2AF2F3003A9D29 /* Dark Theme */,
+				2947AA342E2AF2F3003A9D29 /* Nocti */,
 			);
 		};
 /* End PBXProject section */
@@ -282,7 +282,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "pottsProjects.Dark-Theme";
+				PRODUCT_BUNDLE_IDENTIFIER = pottsProjects.Nocti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SUPPORTED_PLATFORMS = macosx;
@@ -315,7 +315,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "pottsProjects.Dark-Theme";
+				PRODUCT_BUNDLE_IDENTIFIER = pottsProjects.Nocti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SUPPORTED_PLATFORMS = macosx;
@@ -330,7 +330,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2947AA302E2AF2F3003A9D29 /* Build configuration list for PBXProject "Dark Theme" */ = {
+		2947AA302E2AF2F3003A9D29 /* Build configuration list for PBXProject "Nocti" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2947AA3E2E2AF2F4003A9D29 /* Debug */,
@@ -339,7 +339,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2947AA402E2AF2F4003A9D29 /* Build configuration list for PBXNativeTarget "Dark Theme" */ = {
+		2947AA402E2AF2F4003A9D29 /* Build configuration list for PBXNativeTarget "Nocti" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2947AA412E2AF2F4003A9D29 /* Debug */,

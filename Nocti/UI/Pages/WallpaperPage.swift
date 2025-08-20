@@ -15,7 +15,6 @@ struct WallpaperPage: View {
     }
 }
 
-
 #Preview {
     WallpaperPage()
 }

@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2947AA342E2AF2F3003A9D29"
-               BuildableName = "Dark Theme.app"
-               BlueprintName = "Dark Theme"
-               ReferencedContainer = "container:Dark Theme.xcodeproj">
+               BuildableName = "Nocti.app"
+               BlueprintName = "Nocti"
+               ReferencedContainer = "container:Nocti.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2947AA342E2AF2F3003A9D29"
-            BuildableName = "Dark Theme.app"
-            BlueprintName = "Dark Theme"
-            ReferencedContainer = "container:Dark Theme.xcodeproj">
+            BuildableName = "Nocti.app"
+            BlueprintName = "Nocti"
+            ReferencedContainer = "container:Nocti.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -68,9 +68,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2947AA342E2AF2F3003A9D29"
-            BuildableName = "Dark Theme.app"
-            BlueprintName = "Dark Theme"
-            ReferencedContainer = "container:Dark Theme.xcodeproj">
+            BuildableName = "Nocti.app"
+            BlueprintName = "Nocti"
+            ReferencedContainer = "container:Nocti.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
