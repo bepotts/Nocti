@@ -15,8 +15,8 @@ struct NavigationPage: View {
     var body: some View {
         NavigationSplitView {
             List {
-                NavigationLink("Schedule Switch", destination: ThemeSwitchPage())
-                NavigationLink("Wallpaper Settings", destination: WallpaperPage())
+                NavigationLink("Schedule", destination: ThemeSwitchPage())
+                NavigationLink("Personalization", destination: PersonalizationPage())
             }
             .navigationTitle(Text("Menu"))
         } detail: {
