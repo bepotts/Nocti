@@ -35,11 +35,13 @@ struct PersonalizationPage: View {
     
     private struct importButton: View {
         @Binding var importFile: URL?
+        @State private var isImporting = false
         var body: some View {
             Button("Select File") {
                print("import Button Pressed")
+                isImporting = true
            }
-           .fileImporter(isPresented: .constant(true), allowedContentTypes: [.item],
+           .fileImporter(isPresented: $isImporting, allowedContentTypes: [.item],
                          allowsMultipleSelection: false) { result in
                switch result {
                case .success(let urls):
