@@ -9,18 +9,34 @@ import SwiftUI
 import SwiftData
 
 struct NavigationPage: View {
-//    @Binding var storedScheme: AppearancePref
-//    @EnvironmentObject var themeManager: ThemeManager
+    
+    enum Page: Hashable {
+        case schedule
+        case personalization
+    }
+    
+    @State private var selection: Page? = .schedule
     
     var body: some View {
         NavigationSplitView {
-            List {
-                NavigationLink("Schedule", destination: ThemeSwitchPage())
-                NavigationLink("Personalization", destination: PersonalizationPage())
+            List(selection: $selection) {
+                NavigationLink(value: Page.schedule) {
+                    Label("Schedule", systemImage: "calendar")
+                }
+                NavigationLink(value: Page.personalization) {
+                    Label("Personalization", systemImage: "person.crop.circle")
+                }
             }
             .navigationTitle(Text("Menu"))
         } detail: {
-            Text("Select an option from the menu on the left.")
+            switch selection {
+            case .schedule:
+                ThemeSwitchPage()
+            case .personalization:
+                PersonalizationPage()
+            default:
+                EmptyView()
+            }
         }
     }
 }

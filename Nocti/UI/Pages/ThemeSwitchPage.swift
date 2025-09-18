@@ -9,7 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct ThemeSwitchPage: View {
-//    @Binding var storedScheme: AppearancePref
     @EnvironmentObject var themeManager: ThemeManager
     @Environment(\.modelContext) private var modelContext
     let schedule: ThemeSchedule = ThemeSchedule()
@@ -33,7 +32,6 @@ struct ThemeSwitchPage: View {
     }
     
     func circleButtonTapped(_ newColorScheme: ColorScheme?) {
-//        storedScheme = newColorScheme
         themeManager.colorScheme = newColorScheme
     }
     
