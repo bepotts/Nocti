@@ -44,9 +44,6 @@ struct PersonalizationPage: View {
         @Binding var labelName: String
         @State private var isImporting = false
         var body: some View {
-            HStack {
-                
-            }
             Button("Select File") {
                 print("import Button Pressed")
                 isImporting = true
