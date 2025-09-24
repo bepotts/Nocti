@@ -1,18 +1,18 @@
 //
-//  ThemeSwitchPage.swift
+//  SchedulePage.swift
 //  Dark Theme
 //
 //  Created by Brandon Potts on 8/12/25.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
-struct ThemeSwitchPage: View {
+struct SchedulePage: View {
     @EnvironmentObject var themeManager: ThemeManager
     @Environment(\.modelContext) private var modelContext
-    let schedule: ThemeSchedule = ThemeSchedule()
-    
+    let schedule: ThemeSchedule = .init()
+
     var body: some View {
         VStack {
             TimePicker(schedule: schedule)
@@ -30,27 +30,27 @@ struct ThemeSwitchPage: View {
             }
         }
     }
-    
+
     func circleButtonTapped(_ newColorScheme: ColorScheme?) {
         themeManager.colorScheme = newColorScheme
     }
-    
+
     var saveButton: some View {
-        Button (action: {
+        Button(action: {
             print("Save Button Pressed")
             saveSchedule()
         }) {
             Text("Save")
         }
     }
-    
+
     func saveSchedule() {
-        let formatter: DateFormatter = DateFormatter()
+        let formatter = DateFormatter()
         formatter.dateStyle = .none
         formatter.timeStyle = .medium
-        
+
         modelContext.insert(schedule)
-        
+
         do {
             try modelContext.save()
             print("Model Saved")
@@ -61,5 +61,5 @@ struct ThemeSwitchPage: View {
 }
 
 #Preview {
-    ThemeSwitchPage()
+    SchedulePage()
 }

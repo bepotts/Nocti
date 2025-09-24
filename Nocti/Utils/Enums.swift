@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+
 //
-//enum Appearance: String, CaseIterable, Identifiable {
+// enum Appearance: String, CaseIterable, Identifiable {
 //    var id: Self { self }
 //    case system
 //    case light
 //    case dark
-//    
+//
 //    func convertAppearanceToColorScheme() -> ColorScheme {
 //        switch self {
 //        case .light:
@@ -23,7 +24,7 @@ import SwiftUI
 //            return .light
 //        }
 //    }
-//    
+//
 //    static func convertColorSchemeToAppearance(_ colorScheme: ColorScheme) -> Appearance {
 //        switch colorScheme {
 //        case .light:
@@ -34,8 +35,7 @@ import SwiftUI
 //            return .light
 //        }
 //    }
-//    
-//}
-
+//
+// }
 
 enum AppearancePref: String { case system, light, dark }

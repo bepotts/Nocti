@@ -5,11 +5,10 @@
 //  Created by Brandon Potts on 7/19/25.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 struct TimePicker: View {
-    
     @State var schedule: ThemeSchedule
     var body: some View {
         VStack {

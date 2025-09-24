@@ -1,5 +1,5 @@
 //
-//  Untitled.swift
+//  ThemeSchedule.swift
 //  Dark Theme
 //
 //  Created by Brandon Potts on 7/20/25.
@@ -12,17 +12,17 @@ import SwiftUI
 class ThemeSchedule {
     var darkSchedule: Date
     var lightSchedule: Date
-    
+
     init() {
         var lightComponents = DateComponents()
         lightComponents.hour = 8
         lightComponents.minute = 0
-        
+
         var darkComponents = DateComponents()
         darkComponents.hour = 20
         darkComponents.minute = 0
-        
-        self.darkSchedule = Calendar.current.date(from: darkComponents)!
-        self.lightSchedule = Calendar.current.date(from: lightComponents)!
+
+        darkSchedule = Calendar.current.date(from: darkComponents)!
+        lightSchedule = Calendar.current.date(from: lightComponents)!
     }
 }

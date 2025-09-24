@@ -1,5 +1,5 @@
 //
-//  Dark_ThemeApp.swift
+//  DarkThemeApp.swift
 //  Dark Theme
 //
 //  Created by Brandon Potts on 7/18/25.
@@ -11,7 +11,7 @@ import SwiftUI
 struct DarkThemeApp: App {
     @AppStorage("appearance") private var appearance: AppearancePref = .system
     @StateObject private var themeManager = ThemeManager()
-    
+
     init() {
         // This resets the @AppStorage each run when the "-reset-defaults" argument is sent during launch
         if ProcessInfo.processInfo.arguments.contains("-reset-defaults") {
@@ -21,6 +21,7 @@ struct DarkThemeApp: App {
             }
         }
     }
+
     var body: some Scene {
         WindowGroup {
             NavigationPage()
@@ -28,7 +29,7 @@ struct DarkThemeApp: App {
                 .preferredColorScheme(themeManager.colorScheme)
         }
     }
-    
+
     func clearAppKitOverrides() {
         print("Clearning AppKit Overrides")
         NSApp.appearance = nil
@@ -52,7 +53,7 @@ struct AppAppearance: ViewModifier {
             content.preferredColorScheme(.dark)
         }
     }
-    
+
     func clearAppKitOverrides() {
         NSApp.appearance = nil
         NSApplication.shared.windows.forEach { $0.appearance = nil }

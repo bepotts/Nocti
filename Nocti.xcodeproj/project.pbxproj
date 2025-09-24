@@ -10,6 +10,7 @@
 		2947AA4A2E2C1D08003A9D29 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2947AA492E2C1D08003A9D29 /* README.md */; };
 		2947AA4C2E2C1D6E003A9D29 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2947AA4B2E2C1D6E003A9D29 /* .gitignore */; };
 		2947AA552E2D2618003A9D29 /* ideas.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2947AA542E2D260F003A9D29 /* ideas.txt */; };
+		296859C42E8372880057AB55 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = 296859C32E8372880057AB55 /* SwiftFormat */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				296859C42E8372880057AB55 /* SwiftFormat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +79,7 @@
 			);
 			name = Nocti;
 			packageProductDependencies = (
+				296859C32E8372880057AB55 /* SwiftFormat */,
 			);
 			productName = "Dark Theme";
 			productReference = 2947AA352E2AF2F3003A9D29 /* Nocti.app */;
@@ -106,6 +109,10 @@
 			);
 			mainGroup = 2947AA2C2E2AF2F3003A9D29;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				296859C12E836F140057AB55 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
+				296859C22E8372880057AB55 /* XCRemoteSwiftPackageReference "SwiftFormat" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2947AA362E2AF2F3003A9D29 /* Products */;
 			projectDirPath = "";
@@ -353,6 +360,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		296859C12E836F140057AB55 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.61.0;
+			};
+		};
+		296859C22E8372880057AB55 /* XCRemoteSwiftPackageReference "SwiftFormat" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nicklockwood/SwiftFormat";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.58.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		296859C32E8372880057AB55 /* SwiftFormat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 296859C22E8372880057AB55 /* XCRemoteSwiftPackageReference "SwiftFormat" */;
+			productName = SwiftFormat;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2947AA2D2E2AF2F3003A9D29 /* Project object */;
 }

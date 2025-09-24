@@ -1,22 +1,21 @@
 //
-//  ContentView.swift
+//  NavigationPage.swift
 //  Dark Theme
 //
 //  Created by Brandon Potts on 7/18/25.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 struct NavigationPage: View {
-    
     enum Page: Hashable {
         case schedule
         case personalization
     }
-    
+
     @State private var selection: Page? = .schedule
-    
+
     var body: some View {
         NavigationSplitView {
             List(selection: $selection) {
@@ -31,7 +30,7 @@ struct NavigationPage: View {
         } detail: {
             switch selection {
             case .schedule:
-                ThemeSwitchPage()
+                SchedulePage()
             case .personalization:
                 PersonalizationPage()
             default:
