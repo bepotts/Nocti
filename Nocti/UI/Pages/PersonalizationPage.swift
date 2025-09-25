@@ -28,6 +28,7 @@ struct PersonalizationPage: View {
                 Spacer(minLength: 0)
                 Text(darkLabel)
             }
+            .padding()
         }
     }
 
