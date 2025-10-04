@@ -9,8 +9,10 @@ import Cocoa
 
 func toggleDarkMode() {
     let script = """
-    tell application "System Events" 
-        tell apperance preferences
+    tell application "System Events"
+        if not (running) then launch
+        delay 1
+        tell appearance preferences
             set dark mode to true
         end tell
     end tell
@@ -21,7 +23,7 @@ func toggleDarkMode() {
 func toggleLightMode() {
     let script = """
     tell application "System Events" 
-        tell apperance preferences
+        tell appearance preferences
             set dark mode to true
         end tell
     end tell

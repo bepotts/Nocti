@@ -24,8 +24,14 @@ struct SchedulePage: View {
         .padding()
         VStack {
             HStack {
-                CircleButton(action: { circleButtonTapped(.light) })
-                CircleButton(color: .black, action: { circleButtonTapped(.dark) })
+                CircleButton(action: {
+                    circleButtonTapped(.light)
+                    toggleLightMode()
+                })
+                CircleButton(color: .black, action: {
+                    circleButtonTapped(.dark)
+                    toggleDarkMode()
+                })
                 CircleButton(action: { circleButtonTapped(nil) })
             }
         }
