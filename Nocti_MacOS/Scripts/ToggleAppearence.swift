@@ -7,17 +7,6 @@
 
 import Cocoa
 
-func toggleDarkMode() {
-    let script = """
-    tell application "System Events"
-        tell appearance preferences
-            set dark mode to not dark mode
-        end tell
-    end tell
-    """
-    executeAppleScript(script)
-}
-
 func setDarkMode() {
     let script = """
     tell application "System Events"
